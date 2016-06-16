@@ -2,7 +2,7 @@ $(document).ready(function() {
     mainPage.init();
 
 })
-
+// api key: AIzaSyCmljv68nIytDeweNCQXnOGt7_Z3Rz9Neo
 var mainPage = {
     // name: login name stuff,
     //url: server url,
@@ -32,8 +32,8 @@ var mainPage = {
     //crud ajax functions
     create() {
         $.ajax({
-            url: method: "POST"
-            data: data
+            url: method: "POST",
+            data: data,
             success(data) {
                 console.log("created", data);
             },
@@ -46,9 +46,10 @@ var mainPage = {
 
     read() {
         $.ajax({
-            url: method: "GET"
+            url:,
+            method: "GET",
 
-                success(data) {
+            success(data) {
                 console.log("we got it", data);
             },
             error(err) {
@@ -60,9 +61,10 @@ var mainPage = {
 
     update() {
         $.ajax({
-            url: method: "PUT"
+            url:,
+            method: "PUT",
 
-                success(data) {
+            success(data) {
                 console.log("update success", data);
             },
             error(err) {
@@ -74,9 +76,10 @@ var mainPage = {
 
     destroy(deleteId) {
         $.ajax({
-            url: method: "DELETE"
+            url:,
+            method: "DELETE",
 
-                success(data) {
+            success(data) {
                 console.log("its gone", data);
             },
             error(err) {
