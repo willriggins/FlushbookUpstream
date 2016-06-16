@@ -1,9 +1,18 @@
 package com.theironyard;
 
 
+import jodd.json.JsonParser;
+import jodd.json.JsonSerializer;
+import org.h2.tools.Server;
+import spark.Spark;
+
+import java.sql.*;
+import java.util.ArrayList;
+
 public class Main {
 
-    public static void createTables(Connection conn) throws SQLException {
+    public static void createTables(Connection conn) throws SQLException
+    {
         Statement stmt = conn.createStatement();
         stmt.execute("CREATE TABLE IF NOT EXISTS toilets (id IDENTITY, facility VARCHAR, latitude DOUBLE, longitude DOUBLE, access INT, capacity INT, cleanliness INT)");
     }
