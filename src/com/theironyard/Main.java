@@ -38,9 +38,9 @@ public class Main {
         stmt.setString(1, toilet.facility);
         stmt.setDouble(2, toilet.lat);
         stmt.setDouble(3, toilet.lon);
-        stmt.setInt(4, toilet.easeOfAccess);
+        stmt.setInt(4, toilet.access);
         stmt.setInt(5, toilet.capacity);
-        stmt.setInt(6, toilet.capacity);
+        stmt.setInt(6, toilet.cleanliness);
         stmt.execute();
     }
 

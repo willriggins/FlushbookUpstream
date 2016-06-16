@@ -9,7 +9,7 @@ public class Toilet
     String facility;
     double lat;
     double lon;
-    int easeOfAccess;
+    int access;
     int capacity;
     int cleanliness;
 
@@ -17,13 +17,13 @@ public class Toilet
     {
     }
 
-    public Toilet(Integer id, String facility, double lat, double lon, int easeOfAccess, int capacity, int cleanliness)
+    public Toilet(Integer id, String facility, double lat, double lon, int access, int capacity, int cleanliness)
     {
         this.id = id;
         this.facility = facility;
         this.lat = lat;
         this.lon = lon;
-        this.easeOfAccess = easeOfAccess;
+        this.access = access;
         this.capacity = capacity;
         this.cleanliness = cleanliness;
     }
@@ -68,14 +68,14 @@ public class Toilet
         this.lon = lon;
     }
 
-    public int getEaseOfAccess()
+    public int getAccess()
     {
-        return easeOfAccess;
+        return access;
     }
 
-    public void setEaseOfAccess(int easeOfAccess)
+    public void setAccess(int access)
     {
-        this.easeOfAccess = easeOfAccess;
+        this.access = access;
     }
 
     public int getCapacity()
