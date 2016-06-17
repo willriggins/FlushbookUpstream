@@ -6,7 +6,7 @@ $(document).ready(function() {
 var mainPage = {
     // name: login name stuff,
     //url: server url,
-    // objects: array or objects to GET POST PUT DELETE,
+    restroom: [],
     // don't forget The commas!!!!!!!!
     init(){
       mainPage.styling();
@@ -18,9 +18,9 @@ var mainPage = {
 
     //end of styling
     events(){
-      $('form').on('submit', function(event){
+      $('form button').on('click', function(event){
         event.preventDefault();
-        codeAddress();
+        // codeAddress();
         var restroom = {
           facility:$('input[name="facility"]').val(),
           address: $('input[name="address"]').val(),
@@ -36,11 +36,11 @@ var mainPage = {
     //end of events
 
     //crud ajax functions
-    create(){
+    create(restroomObject){
         $.ajax({
-            url:"0.0.0.0:8082",
+            url:"/flush",
             method: "POST",
-            data: restroom,
+            data: restroomObject,
             success(data) {
                 console.log("created", data);
             },
@@ -53,7 +53,7 @@ var mainPage = {
 
     read() {
         $.ajax({
-            url:"localhost4567",
+            url:"/flush",
             method: "GET",
 
             success(data) {
@@ -61,7 +61,7 @@ var mainPage = {
                 data = JSON.parse(data);
                 data.forEach(function(item) {
           var marker = new google.maps.Marker({
-            position: {lat: item.lat, lng: item.lon},
+            position: {lat:  item.lat, lng: item.lon},
             map: window.map,
             title: item.facility
           });
@@ -78,7 +78,7 @@ var mainPage = {
 
     update(){
         $.ajax({
-            url:`localhost4567`,
+            url:`/flush`,
             method: "PUT",
 
             success(data) {
@@ -93,7 +93,7 @@ var mainPage = {
 
     destroy(deleteId) {
         $.ajax({
-            url:"localhost4567",
+            url:"/flush/"+deleteId,
             method: "DELETE",
 
             success(data) {
