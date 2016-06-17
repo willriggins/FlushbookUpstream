@@ -7,17 +7,19 @@ public class Toilet
 {
     Integer id;
     String facility;
+    //String address;
     double lat;
     double lon;
     int access;
     int capacity;
     int cleanliness;
+    String address;
 
     public Toilet()
     {
     }
 
-    public Toilet(Integer id, String facility, double lat, double lon, int access, int capacity, int cleanliness)
+    public Toilet(Integer id, String facility, double lat, double lon, int access, int capacity, int cleanliness, String address)
     {
         this.id = id;
         this.facility = facility;
@@ -26,6 +28,7 @@ public class Toilet
         this.access = access;
         this.capacity = capacity;
         this.cleanliness = cleanliness;
+        this.address = address;
     }
 
     public Integer getId()
@@ -96,5 +99,15 @@ public class Toilet
     public void setCleanliness(int cleanliness)
     {
         this.cleanliness = cleanliness;
+    }
+
+    public String getAddress()
+    {
+        return address;
+    }
+
+    public void setAddress(String address)
+    {
+        this.address = address;
     }
 }
