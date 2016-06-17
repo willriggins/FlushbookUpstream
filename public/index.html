@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
 <head>
     <meta charset="UTF-8">
     <title>flushbook</title>
@@ -9,7 +10,41 @@
       <img class = "flushBooklogo"src="flushbooklogo.png" alt="" />
     </header>
     <div class="mainContainer">
-      <form>
+
+     <input  class = "Facility" type="text" name="name" placeholder="Facility">
+     <input  class = "Lat" type="text" name="name" placeholder="Lat">
+     <input  class = "Lon" type="text" name="name" placeholder="Lon">
+     <input  class = "Capacity" type="text" name="name" placeholder="Capacity">
+     <div class = "ratingSystem" >Ease of access</div>
+
+     <div class="rating">
+     <span><img src="toilet.png" alt="" />
+     </span>
+     <span><img src="toilet.png" alt="" />
+     </span>
+     <span><img src="toilet.png" alt="" />
+     </span>
+     <span><img src="toilet.png" alt="" />
+     </span>
+     <span><img src="toilet.png" alt="" />
+     </span>
+   </div>
+    </div>
+    <div class="mapContainer">
+      <div id="map"></div>
+
+    </div>
+    <script src="map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmljv68nIytDeweNCQXnOGt7_Z3Rz9Neo&callback=initMap"
+    async defer></script>
+  </body>
+</html>
+</head>
+<body>
+</body>
+</html>
+
+      <!-- <form>
           <input class="Facility" type="text" name="facility" placeholder="Facility">
           <input class="Address" id="address" type="text" name="address" placeholder="Address">
           <input class="Lat" type="text" name="lat" placeholder="Lat">
@@ -39,3 +74,4 @@
     <script src="main.js"></script>
   </body>
 </html>
+>>>>>>> cc3a2083b279149d9671bd48c7923b190ee57b37 -->
