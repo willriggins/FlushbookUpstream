@@ -38,7 +38,7 @@ var mainPage = {
     //crud ajax functions
     create(){
         $.ajax({
-            url:"localhost4567",
+            url:"0.0.0.0:8082",
             method: "POST",
             data: restroom,
             success(data) {
