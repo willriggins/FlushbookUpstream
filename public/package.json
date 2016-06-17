@@ -4,8 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "sass": "node-sass styles.scss styles.css -w",
-    "start": "serve & npm run sass"
+    
   },
   "author": "",
   "license": "ISC"

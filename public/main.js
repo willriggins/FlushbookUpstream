@@ -38,7 +38,7 @@ var mainPage = {
     //crud ajax functions
     create(){
         $.ajax({
-            url:"url",
+            url:"localhost4567",
             method: "POST",
             data: restroom,
             success(data) {
@@ -53,7 +53,7 @@ var mainPage = {
 
     read() {
         $.ajax({
-            url:"url",
+            url:"localhost4567",
             method: "GET",
 
             success(data) {
@@ -78,7 +78,7 @@ var mainPage = {
 
     update(){
         $.ajax({
-            url:"",
+            url:`localhost4567`,
             method: "PUT",
 
             success(data) {
@@ -93,7 +93,7 @@ var mainPage = {
 
     destroy(deleteId) {
         $.ajax({
-            url:"",
+            url:"localhost4567",
             method: "DELETE",
 
             success(data) {
