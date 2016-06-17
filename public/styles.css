@@ -77,3 +77,12 @@ margin-top: 14px;
 .rating > span:hover ~ span:before {
    position: absolute;
 }
+
+/*span:hover{
+    background-color: yellow;
+}*/
+@-webkit-keyframes{}
+
+span > img:hover {
+  transform: scale(1.30);
+}

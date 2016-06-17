@@ -6,10 +6,10 @@ package com.theironyard;
 public class Toilet
 {
     Integer id;
-    String facility;
-    double lat;
+    String Facility;
     double lon;
-    int access;
+    double lat;
+    int easeOfAccess;
     int capacity;
     int cleanliness;
 
@@ -17,13 +17,13 @@ public class Toilet
     {
     }
 
-    public Toilet(Integer id, String facility, double lat, double lon, int access, int capacity, int cleanliness)
+    public Toilet(Integer id, String facility, double lon, double lat, int easeOfAccess, int capacity, int cleanliness)
     {
         this.id = id;
-        this.facility = facility;
-        this.lat = lat;
+        Facility = facility;
         this.lon = lon;
-        this.access = access;
+        this.lat = lat;
+        this.easeOfAccess = easeOfAccess;
         this.capacity = capacity;
         this.cleanliness = cleanliness;
     }
@@ -40,22 +40,12 @@ public class Toilet
 
     public String getFacility()
     {
-        return facility;
+        return Facility;
     }
 
     public void setFacility(String facility)
     {
-        this.facility = facility;
-    }
-
-    public double getLat()
-    {
-        return lat;
-    }
-
-    public void setLat(double lat)
-    {
-        this.lat = lat;
+        Facility = facility;
     }
 
     public double getLon()
@@ -68,14 +58,24 @@ public class Toilet
         this.lon = lon;
     }
 
-    public int getAccess()
+    public double getLat()
     {
-        return access;
+        return lat;
     }
 
-    public void setAccess(int access)
+    public void setLat(double lat)
     {
-        this.access = access;
+        this.lat = lat;
+    }
+
+    public int getEaseOfAccess()
+    {
+        return easeOfAccess;
+    }
+
+    public void setEaseOfAccess(int easeOfAccess)
+    {
+        this.easeOfAccess = easeOfAccess;
     }
 
     public int getCapacity()
