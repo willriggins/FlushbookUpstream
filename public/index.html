@@ -10,13 +10,13 @@
       <img class = "flushBooklogo"src="flushbooklogo.png" alt="" />
     </header>
     <div class="mainContainer">
-
+      <form>
      <input  class = "Facility" type="text" name="name" placeholder="Facility">
      <input  class = "Lat" type="text" name="name" placeholder="Lat">
      <input  class = "Lon" type="text" name="name" placeholder="Lon">
      <input  class = "Capacity" type="text" name="name" placeholder="Capacity">
      <div class = "ratingSystem" >Ease of access</div>
-
+   </form>
      <div class="rating">
      <span><img src="toilet.png" alt="" />
      </span>
@@ -34,9 +34,12 @@
       <div id="map"></div>
 
     </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="map.js"></script>
+    <script src="main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmljv68nIytDeweNCQXnOGt7_Z3Rz9Neo&callback=initMap"
     async defer></script>
+
   </body>
 </html>
 </head>
