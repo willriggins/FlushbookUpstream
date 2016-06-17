@@ -10,21 +10,33 @@
       <img class = "flushBooklogo"src="flushbooklogo.png" alt="" />
     </header>
     <div class="mainContainer">
-     <input  class = "Facility" type="text" name="name" placeholder="Facility">
-     <input  class = "Lat" type="text" name="name" placeholder="Lat">
-     <input  class = "Lon" type="text" name="name" placeholder="Lon">
-     <input  class = "Capacity" type="text" name="name" placeholder="Capacity">
-     <div class = "ratingSystem" >Ease of access</div>
+      <form>
+          <input class="Facility" type="text" name="facility" placeholder="Facility">
+          <input class="Address" id="address" type="text" name="address" placeholder="Address">
+          <input class="Lat" type="text" name="lat" placeholder="Lat">
+          <input class="Lon" type="text" name="lon" placeholder="Lon">
+          <input class="access" type="text" name="access" placeholder="access">
+          <input class="Capacity" type="text" name="capacity" placeholder="Capacity">
+          <div class="ratingSystem">Ease of access</div>
 
-     <div class="rating">
-     <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-   </div>
+          <div class="rating">
+              <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          </div>
+      </form>
+    </div>
+    <div class="listOfToilets">
+      <ul>
+        
+      </ul>
     </div>
     <div class="mapContainer">
       <div id="map"></div>
     </div>
-    <script src="map.js"></script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmljv68nIytDeweNCQXnOGt7_Z3Rz9Neo&callback=initMap"
     async defer></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="map.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

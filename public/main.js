@@ -8,32 +8,39 @@ var mainPage = {
     //url: server url,
     // objects: array or objects to GET POST PUT DELETE,
     // don't forget The commas!!!!!!!!
-    init() {
-
-        mainPage.styling() {
-
-            },
-            mainPage.events() {
-
-            },
+    init(){
+      mainPage.styling();
+      mainPage.events();
     },
-    //end of init
-
-    styling() {
-
+    styling(){
+      mainPage.read();
     },
 
     //end of styling
-    events() {
-
+    events(){
+      $('form').on('submit', function(event){
+        event.preventDefault();
+        codeAddress();
+        var restroom = {
+          facility:$('input[name="facility"]').val(),
+          address: $('input[name="address"]').val(),
+          latitude: $('input[name="lat"]').val(),
+          longitude: $('input[name="lon"]').val(),
+          access: $('input[name="access"]').val(),
+          capacity: $('input[name="capacity"]').val(),
+          cleanliness: 0,
+        }
+        mainPage.create(JSON.stringify(restroom));
+      })
     },
     //end of events
 
     //crud ajax functions
-    create() {
+    create(){
         $.ajax({
-            url: method: "POST",
-            data: data,
+            url:"url",
+            method: "POST",
+            data: restroom,
             success(data) {
                 console.log("created", data);
             },
@@ -46,22 +53,32 @@ var mainPage = {
 
     read() {
         $.ajax({
-            url:,
+            url:"url",
             method: "GET",
 
             success(data) {
                 console.log("we got it", data);
-            },
-            error(err) {
+                data = JSON.parse(data);
+                data.forEach(function(item) {
+          var marker = new google.maps.Marker({
+            position: {lat: item.lat, lng: item.lon},
+            map: window.map,
+            title: item.facility
+          });
+          $('.listOfToilets').append(`<li>${item.address} ${item.lat} ${item.lon} ${item.access} ${item.capacity} ${item.cleanliness}</li>`)
+        })
+      },
+            error(err){
                 console.error("shit", err);
             },
-        })
-    },
-    //end of read
 
-    update() {
+    })
+  },
+// end of read
+
+    update(){
         $.ajax({
-            url:,
+            url:"",
             method: "PUT",
 
             success(data) {
@@ -72,11 +89,11 @@ var mainPage = {
             },
         })
     },
-    //end of update
+//end of update
 
     destroy(deleteId) {
         $.ajax({
-            url:,
+            url:"",
             method: "DELETE",
 
             success(data) {
@@ -85,6 +102,6 @@ var mainPage = {
             error(err) {
                 console.error("still there", err);
             },
-        })
-    },
+          })
+        }
 }
