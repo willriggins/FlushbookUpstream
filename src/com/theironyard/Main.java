@@ -36,7 +36,7 @@ public class Main {
     }
 
     public static void insertToilet(Connection conn, Toilet toilet) throws SQLException {
-        PreparedStatement stmt = conn.prepareStatement("INSERT INTO toilets VALUES(NULL, ?, ?, ?, ?, ?, ?)");
+        PreparedStatement stmt = conn.prepareStatement("INSERT INTO toilets VALUES(NULL, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
         stmt.setString(1, toilet.facility);
         stmt.setDouble(2, toilet.lat);
         stmt.setDouble(3, toilet.lon);
