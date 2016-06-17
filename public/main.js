@@ -37,7 +37,8 @@ var mainPage = {
 
     //crud ajax functions
     create(restroomObject){
-        $.ajax({
+        $.post({
+            contentType: "application/json; charset=utf-8",
             url:"/flush",
             method: "POST",
             data: restroomObject,
