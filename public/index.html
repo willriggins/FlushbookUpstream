@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+<link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  <head>
+    <meta charset="utf-8">
     <title>flushbook</title>
-</head>
-<body>
-flushbook
-</body>
+  </head>
+  <body>
+    <header>
+      <img class = "flushBooklogo"src="flushbooklogo.png" alt="" />
+    </header>
+    <div class="mainContainer">
+     <input  class = "Facility" type="text" name="name" placeholder="Facility">
+     <input  class = "Lat" type="text" name="name" placeholder="Lat">
+     <input  class = "Lon" type="text" name="name" placeholder="Lon">
+     <input  class = "Capacity" type="text" name="name" placeholder="Capacity">
+     <div class = "ratingSystem" >Ease of access</div>
+
+     <div class="rating">
+     <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+   </div>
+    </div>
+    <div class="mapContainer">
+      <div id="map"></div>
+    </div>
+    <script src="map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmljv68nIytDeweNCQXnOGt7_Z3Rz9Neo&callback=initMap"
+    async defer></script>
+  </body>
 </html>
