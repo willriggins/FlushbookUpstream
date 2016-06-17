@@ -24,12 +24,13 @@ var mainPage = {
         var restroom = {
           facility:$('input[name="facility"]').val(),
           address: $('input[name="address"]').val(),
-          latitude: $('input[name="lat"]').val(),
-          longitude: $('input[name="lon"]').val(),
+          lat: $('input[name="lat"]').val(),
+          lon: $('input[name="lon"]').val(),
           access: $('input[name="access"]').val(),
           capacity: $('input[name="capacity"]').val(),
           cleanliness: 0,
         }
+        console.log(restroom);
         mainPage.create(JSON.stringify(restroom));
       })
     },
