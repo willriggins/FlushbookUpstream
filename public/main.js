@@ -62,7 +62,7 @@ var mainPage = {
                 console.log("we got it", data);
                 data = JSON.parse(data);
                 data.forEach(function(item) {
-          var marker = new google.maps.Marker({
+          var marker = new Google.maps.Marker({
             position: {lat:  item.lat, lng: item.lon},
             map: window.map,
             title: item.facility
