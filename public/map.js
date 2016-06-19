@@ -6,10 +6,13 @@ function initMap() {
     center: {lat: 32.7765, lng: -79.9311},
     zoom: 16
   });
+}
+
+function newMarker(item) {
   var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Charleston'
+    position: {lat:  Number(item.lat), lng: Number(item.lon)},
+    map: window.map,
+    title: item.facility
   });
 }
 

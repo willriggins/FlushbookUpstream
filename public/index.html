@@ -8,15 +8,15 @@
   <body>
     <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
   <iframe frameborder="0" height="100%" width="100%"
-    src="https://www.youtube.com/embed/VKVkGZCmWis">
+    src="https://www.youtube.com/embed/VKVkGZCmWis?rel=0&autoplay=1&start=30&controls=0&loop=1">
   </iframe>
 </div>
-<embed height="0" width="0"
- src="<iframe width="560" height="315" src="https://www.youtube.com/embed/VKVkGZCmWis?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>" />
+<!-- <embed height="0" width="0"
+ src="https://www.youtube.com/embed/VKVkGZCmWis?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>" /> -->
 <!-- // Replace ID with the actual ID of your YouTube video -->
     <header>
-      <img class = "flushBooklogo"src="flushbooklogo.png" alt="" />
     </header>
+    <img class = "flushBooklogo"src="flushbooklogo.png" alt="" />
     <div class="mainContainer">
       <form>
            <input  class = "Facility" type="text" name="facility" placeholder="Facility">
@@ -24,7 +24,7 @@
            <input  class = "Lon" type="text" name="lon" placeholder="Lon">
            <input  class = "Capacity" type="text" name="capacity" placeholder="Capacity">
            <div class = "ratingSystem" >Ease of access</div>
-           <button type="button" name="button"></button>
+
      <div class="rating">
      <span><img src="toilet.png" alt="" />
      </span>
@@ -39,10 +39,14 @@
    </div>
    <button class = "submit"type="button" name="button">SUBMIT</button>
     </div>
+
   </form>
     <div class="mapContainer">
       <div id="map"></div>
-
+    </div>
+    <div class="locationTracker">
+      <ul>
+      </ul>
     </div>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="map.js"></script>
