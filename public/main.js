@@ -88,7 +88,7 @@ var mainPage = {
 
     update(updateId){
         $.ajax({
-            url:`/flush/`+updateId,
+            url:"/flush/"+updateId,
             method: "PUT",
 
             success(data) {
